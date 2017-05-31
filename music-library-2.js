@@ -67,13 +67,16 @@ var library = {
 
   },
   addTrack: function (name, artist, album) {
-    var id = "t" + uid();
+    var id = "t" + this.uid();
     this.tracks[id] = {id: id, name: name, artist: artist, album: album};
   },
   addPlaylist: function (name) {
-    var id = "p" + uid();
+    var id = "p" + this.uid();
     this.playlists[id] = {id: id, name: name, tracks: []};
   }
 }
 
-library.printPlaylist("p01");
+library.addPlaylist("favplaylist");
+library.printPlaylists();
+
+
