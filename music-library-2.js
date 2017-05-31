@@ -48,15 +48,15 @@ var library = {
     var libraryTracks =  this.tracks;
     for (var currentTrack in libraryTracks) {
       if(libraryTracks.hasOwnProperty(currentTrack)) {
-        console.log(returnTracks(libraryTracks[currentTrack]));
+        console.log(this.returnTracks(libraryTracks[currentTrack]));
       }
     }
   },
   printPlaylist: function (playlistId) {
-    console.log(returnPlaylists(this.playlists[playlistId]));
+    console.log(this.returnPlaylists(this.playlists[playlistId]));
     var tracks = this.playlists[playlistId].tracks;
     for (i = 0; i < tracks.length; i++) {
-       console.log(returnTracks(this.tracks[tracks[i]]));
+       console.log(this.returnTracks(this.tracks[tracks[i]]));
     }
   },
   addTrackToPlaylist: function (trackId, playlistId) {
@@ -76,4 +76,4 @@ var library = {
   }
 }
 
-library.printPlaylists();
+library.printPlaylist("p01");
